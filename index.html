@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanted Notice</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wanted-container">
+        <h1>🚨 WANTED 🚨</h1>
+        <img src="WhatsApp Image 2025-02-08 at 22.44.04_69ec994c.jpg" alt="Brother's Photo" class="wanted-photo">
+        <h2 class="wanted-name">MUSTAFA ADYAN MUKHTAR</h2>
+        <p class="wanted-description">
+            The individual pictured above is wanted by the police for excessive mischief, 
+            unauthorized naughty stuff. A reward of $1,000,000 is offered for 
+            information leading to their capture.
+        </p>
+        <p class="wanted-warning">
+            ⚠️ WARNING: This individual is considered highly dangerous and should not be approached. 
+            Contact your local police department immediately if spotted.
+        </p>
+        <button class="panic-button" onclick="panic()">🚨 PANIC BUTTON 🚨</button>
+    </div>
+
+    <!-- Message that appears when the panic button is clicked -->
+    <div id="panic-message" class="panic-message">
+        🚓👮 ATTENTION! THE POLICE HAVE BEEN NOTIFIED! STAY WHERE YOU ARE! 👮🚓
+    </div>
+
+    <!-- Audio element for the siren sound -->
+    <audio id="siren-sound" src="Police Siren Sound Effect.mp3" loop></audio>
+
+    <script>
+        function panic() {
+            // Show the panic message
+            const panicMessage = document.getElementById("panic-message");
+            panicMessage.style.display = "block";
+
+            // Add the shaking effect
+            panicMessage.classList.add("shake");
+
+            // Change the background color and text color
+            document.body.style.backgroundColor = "red";
+            document.body.style.color = "white";
+
+            // Play the siren sound
+            const siren = document.getElementById("siren-sound");
+            siren.play();
+        }
+    </script>
+</body>
+</html>
